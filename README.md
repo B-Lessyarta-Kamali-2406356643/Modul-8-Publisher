@@ -12,3 +12,6 @@ After running the subscriber, RabbitMQ shows one active connection and one consu
 ## Sending and Processing Event
 When I run cargo run in the publisher directory, the publisher sends 5 events to the message broker. These events are then consumed and processed by the subscriber.
 ![Sending and Processing Event](images/sending-processing-event.png)
+## Monitoring Chart Based on Publisher
+When I run the publisher, it sends events to RabbitMQ. The RabbitMQ message rates chart shows activity because messages are published by the publisher and then consumed by the subscriber.
+![RabbitMQ Chart](images/rabbitmq-chart.png)
