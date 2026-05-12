@@ -15,3 +15,16 @@ When I run cargo run in the publisher directory, the publisher sends 5 events to
 ## Monitoring Chart Based on Publisher
 When I run the publisher, it sends events to RabbitMQ. The RabbitMQ message rates chart shows activity because messages are published by the publisher and then consumed by the subscriber.
 ![RabbitMQ Chart](images/rabbitmq-chart.png)
+
+# Bonus
+## Bonus: Message Broker Monitoring with Multiple Subscribers
+
+In this bonus experiment, I ran multiple subscribers at the same time and then executed the publisher several times. Each time the publisher is run, it sends five `UserCreatedEventMessage` events to the RabbitMQ message broker.
+
+Because there are multiple subscribers connected to the same broker, RabbitMQ can distribute the messages to more than one consumer. This can be observed from the RabbitMQ dashboard, where the number of consumers increases and the message rate graph changes when the publisher sends messages.
+
+![RabbitMQ Multiple Subscribers](images/rabbitmq-multiple-subscribers.png)
+
+After running the publisher several times, the RabbitMQ message rate graph shows publish and deliver activity. This indicates that the publisher successfully sent messages to the broker, and the messages were then delivered to the active subscribers.
+
+![RabbitMQ Message Rate Bonus](images/rabbitmq-message-rate-bonus.png)
